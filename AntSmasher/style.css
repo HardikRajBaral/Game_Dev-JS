@@ -1,0 +1,13 @@
+*{  
+    margin:0;
+    background-color:aliceblue;
+}
+body{
+    overflow: hidden;
+}
+#canvas{
+    
+    border: 2px solid black;
+    background-image: url('./floor.jpg');
+    background-size:contain
+}

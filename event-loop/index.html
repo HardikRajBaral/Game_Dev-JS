@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="count"></span>
+    <script>
+        const count =document.getElementById("count")
+        count.textContent=0
+        let num =0
+        setInterval(()=>{
+            count.textContent++
+             if(count.textContent<10){
+                document.body.style.backgroundColor="Red"
+            }
+            if(count.textContent>10 && count.textContent<50){
+                document.body.style.backgroundColor="blue"
+            }
+            if(count.textContent>50){
+                document.body.style.backgroundColor="green"
+            }
+        },1000) 
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>
+            Drawing App
+        </title>
+      
+    </head>
+    <body>
+        <input type="color" id="colorselect">
+        <script>
+            let backgroundColor="black";
+            let mouseClicked=false;
+            document.addEventListener('mousedown',()=>{
+                mouseClicked=true;
+            })
+            document.addEventListener('mouseup',()=>{
+                mouseClicked=false;
+            })
+            document.addEventListener("mousemove",()=>{
+                if(mouseClicked){
+                const div =document.createElement("div");
+                div.style.backgroundColor=backgroundColor
+                div.style.position="absolute"
+                div.style.height="10px";
+                div.style.borderRadius="50%"
+                div.style.aspectRatio=1;
+                div.style.top=event.y-5
+                div.style.left=event.x-5
+                document.body.append(div) 
+                } 
+            })
+         
+            const colorselect=document.getElementById("colorselect");
+           colorselect.addEventListener('input',()=>{
+                backgroundColor=colorselect.value;
+           })
+        </script>
+    </body>
+</html>

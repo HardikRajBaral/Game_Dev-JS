@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>
+            My Paint app
+        </title>
+        <style>
+
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                background-color: yellow;
+                position: relative;
+            }
+            #box{
+                z-index: 1;
+                background-color: red;
+                width: 100px;
+                aspect-ratio: 1;
+                /* margin-left: 100px; */
+                position:absolute;                
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Painting Space</h1>
+        <p>you can paint anything in the space</p>
+        <div id="box"></div>
+
+        <SCRIPT>
+            const box=document.getElementById('box')
+            
+
+            document.addEventListener("mousemove",()=>{
+                box.style.left=event.x-50
+                box.style.top=event.y-50
+                console.log(event)
+            })
+
+        </SCRIPT>
+    </body>
+
+</html>

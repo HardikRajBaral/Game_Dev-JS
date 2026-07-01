@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        <H1>App Box</H1>
+        <input type="color" name="color" id="color">
+        <script>
+            document.addEventListener("mousemove",(event)=>{
+
+                const box=document.createElement("div")
+                box.style.width="20px"
+                box.style.aspectRatio="1/1"
+                box.style.backgroundColor="green"
+                box.style.position="absolute"
+                box.style.top=event.y-10
+                box.style.left=event.x-10
+                document.body.append(box)
+                console.log("X:",event.x,"Y:",event.y)
+            })
+        </script>
+    </body>
+</html>

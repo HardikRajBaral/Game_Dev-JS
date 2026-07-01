@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        #box{background-color: red;
+            width:200px;
+            aspect-ratio:1/1;
+            
+        }
+        #box:hover{
+            cursor: pointer ;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+
+
+    <script>
+        const box=document.getElementById("box")
+        box.style.backgroundColor='brown'
+        box.style.width="300px"
+       
+        document.body.style.backgroundColor="gray"
+        box.addEventListener("mouseenter",()=>{
+            console.log("i am here")
+            box.style.backgrrealseasedoundColor='blue'
+        })
+        box.addEventListener("mousedown",()=>{
+            box.style.width="350px"
+        })
+        box.addEventListener("mouseup",()=>{
+            box.style.width="300px"
+        })
+        box.addEventListener("mouseleave",()=>{
+            console.log("i am leaving")
+            box.style.backgroundColor="brown"
+        })
+        
+
+
+        console.log(box)
+    </script>
+</body>
+</html>
